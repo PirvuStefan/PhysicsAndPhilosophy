@@ -1,0 +1,267 @@
+---
+---
+
+<section class="philosophical-perspectives">
+    <h2>Philosophical Perspectives</h2>
+
+    <div class="perspective-cards">
+        <div class="perspective-card" data-perspective="material">
+            <h3>Material Identity</h3>
+            <div class="icon-container">
+                <div class="icon material"></div>
+            </div>
+            <p>
+                Focuses on the physical composition of the ship. If all original materials 
+                are replaced, can it be considered the same object?
+            </p>
+            <div class="tooltip">
+                "The physical continuity argument suggests that material composition 
+                determines identity."
+            </div>
+        </div>
+
+        <div class="perspective-card" data-perspective="form">
+            <h3>Form & Function</h3>
+            <div class="icon-container">
+                <div class="icon form"></div>
+            </div>
+            <p>
+                Considers the ship's purpose and design. If it maintains the same function 
+                and form, does the material matter?
+            </p>
+            <div class="tooltip">
+                "Aristotelian philosophy emphasizes form over matter in determining essence."
+            </div>
+        </div>
+
+        <div class="perspective-card" data-perspective="continuity">
+            <h3>Temporal Continuity</h3>
+            <div class="icon-container">
+                <div class="icon temporal"></div>
+            </div>
+            <p>
+                Examines the gradual nature of change. Does continuous transformation 
+                preserve identity through time?
+            </p>
+            <div class="tooltip">
+                "The gradual replacement process maintains a continuous thread of identity."
+            </div>
+        </div>
+    </div>
+
+    <div class="discussion-questions">
+        <h3>Questions for Reflection</h3>
+        <ul>
+            <li>If we built a second ship from the original parts, which would be the true Ship of Theseus?</li>
+            <li>How does this paradox relate to personal identity through physical change?</li>
+            <li>What role does collective memory and social recognition play in object identity?</li>
+        </ul>
+    </div>
+
+    <div class="references">
+        <h3>Classical References</h3>
+        <div class="reference-list">
+            <div class="reference">
+                <span class="author">Plutarch</span>
+                <span class="work">Life of Theseus</span>
+                <q>The ship wherein Theseus and the youth of Athens returned...</q>
+            </div>
+            <div class="reference">
+                <span class="author">Thomas Hobbes</span>
+                <span class="work">De Corpore</span>
+                <q>That ship of Theseus concerning the difference whereof made by continued reparation...</q>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .philosophical-perspectives {
+        margin: 4rem 0;
+        padding: 2rem;
+        background: rgba(var(--accent-dark), 0.2);
+        border-radius: 12px;
+    }
+
+    h2 {
+        text-align: center;
+        color: rgb(var(--accent-light));
+        margin-bottom: 2rem;
+    }
+
+    .perspective-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .perspective-card {
+        padding: 1.5rem;
+        background: rgba(var(--accent-dark), 0.3);
+        border-radius: 8px;
+        border: 1px solid rgba(var(--accent-light), 0.2);
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .perspective-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .perspective-card h3 {
+        color: rgb(var(--accent-light));
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .icon-container {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(var(--accent-light), 0.2);
+        position: relative;
+    }
+
+    .icon.material::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgb(var(--accent-light));
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .icon.form::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: rgb(var(--accent-light));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .icon.temporal::before {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 30px;
+        background: rgb(var(--accent-light));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .icon.temporal::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: rgb(var(--accent-light));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tooltip {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(var(--accent-dark), 0.9);
+        padding: 1rem;
+        border-radius: 4px;
+        width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1;
+    }
+
+    .perspective-card:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .discussion-questions {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: rgba(var(--accent-dark), 0.3);
+        border-radius: 8px;
+    }
+
+    .discussion-questions h3 {
+        color: rgb(var(--accent-light));
+        margin-bottom: 1rem;
+    }
+
+    .discussion-questions ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .discussion-questions li {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+    .discussion-questions li::before {
+        content: "•";
+        color: rgb(var(--accent-light));
+        position: absolute;
+        left: 0;
+    }
+
+    .references {
+        margin-top: 3rem;
+    }
+
+    .references h3 {
+        color: rgb(var(--accent-light));
+        margin-bottom: 1rem;
+    }
+
+    .reference-list {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .reference {
+        padding: 1rem;
+        background: rgba(var(--accent-dark), 0.3);
+        border-radius: 4px;
+    }
+
+    .reference .author {
+        color: rgb(var(--accent-light));
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+
+    .reference .work {
+        font-style: italic;
+        margin-right: 1rem;
+    }
+
+    .reference q {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.9em;
+        color: rgba(255, 255, 255, 0.8);
+    }
+</style>

@@ -1,0 +1,231 @@
+---
+---
+
+<div class="quantum-states-container">
+    <div class="state-grid">
+        <div class="state-card">
+            <h3>Ground State</h3>
+            <div class="visualization">
+                <div class="energy-level n1"></div>
+                <div class="electron"></div>
+            </div>
+            <p>The lowest energy state of an electron in an atom (n=1)</p>
+        </div>
+
+        <div class="state-card">
+            <h3>First Excited State</h3>
+            <div class="visualization">
+                <div class="energy-level n1"></div>
+                <div class="energy-level n2"></div>
+                <div class="electron excited"></div>
+            </div>
+            <p>Electron jumps to second energy level (n=2)</p>
+        </div>
+
+        <div class="state-card">
+            <h3>Electron Transition</h3>
+            <div class="visualization">
+                <div class="energy-level n1"></div>
+                <div class="energy-level n2"></div>
+                <div class="electron transitioning"></div>
+                <div class="photon"></div>
+            </div>
+            <p>Emission of photon during energy level transition</p>
+        </div>
+
+        <div class="state-card">
+            <h3>Quantum Tunneling</h3>
+            <div class="visualization barrier">
+                <div class="potential-barrier"></div>
+                <div class="particle tunneling"></div>
+            </div>
+            <p>Particle passing through a potential barrier</p>
+        </div>
+
+        <div class="state-card">
+            <h3>Quantum Superposition</h3>
+            <div class="visualization">
+                <div class="superposition-state"></div>
+            </div>
+            <p>Simultaneous existence in multiple states</p>
+        </div>
+
+        <div class="state-card">
+            <h3>Wave Function Collapse</h3>
+            <div class="visualization">
+                <div class="wave-function"></div>
+                <div class="collapse-point"></div>
+            </div>
+            <p>Transition from quantum to classical state</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .quantum-states-container {
+        margin: 2rem 0;
+        padding: 1rem;
+    }
+
+    .state-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .state-card {
+        background: rgba(var(--accent-dark), 0.2);
+        border-radius: 8px;
+        padding: 1.5rem;
+        border: 1px solid rgba(var(--accent-light), 0.15);
+    }
+
+    .state-card h3 {
+        color: rgb(var(--accent-light));
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+
+    .visualization {
+        height: 200px;
+        position: relative;
+        margin: 1rem 0;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .energy-level {
+        position: absolute;
+        height: 2px;
+        background: rgba(var(--accent-light), 0.5);
+        width: 100%;
+    }
+
+    .n1 { bottom: 30%; }
+    .n2 { bottom: 60%; }
+
+    .electron {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: rgb(var(--accent-light));
+        border-radius: 50%;
+        bottom: 30%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        box-shadow: 0 0 10px rgb(var(--accent-light));
+    }
+
+    .electron.excited {
+        bottom: 60%;
+        animation: pulse 2s infinite;
+    }
+
+    .electron.transitioning {
+        animation: transition 3s infinite;
+    }
+
+    .photon {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: rgb(var(--accent));
+        border-radius: 50%;
+        opacity: 0;
+        animation: emit 3s infinite;
+    }
+
+    .potential-barrier {
+        position: absolute;
+        width: 20px;
+        height: 80%;
+        background: rgba(var(--accent-dark), 0.5);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .particle.tunneling {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: rgb(var(--accent-light));
+        border-radius: 50%;
+        animation: tunnel 4s infinite;
+    }
+
+    .superposition-state {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            rgba(var(--accent), 0.5),
+            rgba(var(--accent-light), 0.5));
+        animation: superpose 4s infinite;
+    }
+
+    .wave-function {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg,
+            transparent,
+            rgba(var(--accent-light), 0.3),
+            transparent);
+        animation: waveCollapse 4s infinite;
+    }
+
+    .collapse-point {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: rgb(var(--accent));
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        animation: collapse 4s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: translate(-50%, 50%) scale(1); }
+        50% { transform: translate(-50%, 50%) scale(1.2); }
+    }
+
+    @keyframes transition {
+        0%, 100% { bottom: 30%; }
+        50% { bottom: 60%; }
+    }
+
+    @keyframes emit {
+        0% { opacity: 0; left: 50%; bottom: 60%; }
+        50% { opacity: 1; left: 80%; bottom: 30%; }
+        100% { opacity: 0; left: 80%; bottom: 30%; }
+    }
+
+    @keyframes tunnel {
+        0% { left: 20%; opacity: 1; }
+        45% { left: 45%; opacity: 0.3; }
+        55% { left: 55%; opacity: 0.3; }
+        100% { left: 80%; opacity: 1; }
+    }
+
+    @keyframes superpose {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.8; }
+    }
+
+    @keyframes waveCollapse {
+        0% { transform: scaleX(1); opacity: 0.8; }
+        90% { transform: scaleX(1); opacity: 0.8; }
+        100% { transform: scaleX(0.2); opacity: 0.2; }
+    }
+
+    @keyframes collapse {
+        0% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        90% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+</style>

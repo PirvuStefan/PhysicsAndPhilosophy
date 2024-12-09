@@ -1,0 +1,124 @@
+---
+---
+
+<section class="fractal-nature">
+    <h2>The Fractal Nature of Reality</h2>
+    
+    <div class="fractal-container">
+        <div class="sierpinski-triangle">
+            <div class="triangle t1"></div>
+            <div class="triangle t2"></div>
+            <div class="triangle t3"></div>
+            <div class="triangle t4"></div>
+            <div class="triangle t5"></div>
+            <div class="triangle t6"></div>
+            <div class="triangle t7"></div>
+        </div>
+    </div>
+
+    <div class="fractal-explanation">
+        <p>
+            The self-similar patterns found in nature, from quantum fluctuations to cosmic 
+            structures, suggest an underlying unity and interconnectedness in reality. 
+            This fractal nature of existence bridges the microscopic and macroscopic, 
+            the physical and the philosophical.
+        </p>
+    </div>
+</section>
+
+<style>
+    .fractal-nature {
+        margin: 4rem 0;
+        padding: 2rem;
+        background: rgba(var(--accent-dark), 0.2);
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    h2 {
+        color: rgb(var(--accent-light));
+        margin-bottom: 2rem;
+    }
+
+    .fractal-container {
+        height: 400px;
+        margin: 2rem 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sierpinski-triangle {
+        width: 300px;
+        height: 260px;
+        position: relative;
+    }
+
+    .triangle {
+        position: absolute;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 43.3px solid rgb(var(--accent-light));
+        opacity: 0;
+        animation: appear 0.5s forwards;
+    }
+
+    .t1 {
+        top: 0;
+        left: 125px;
+        animation-delay: 0s;
+    }
+
+    .t2 {
+        top: 43.3px;
+        left: 100px;
+        animation-delay: 0.5s;
+    }
+
+    .t3 {
+        top: 43.3px;
+        left: 150px;
+        animation-delay: 1s;
+    }
+
+    .t4 {
+        top: 86.6px;
+        left: 75px;
+        animation-delay: 1.5s;
+    }
+
+    .t5 {
+        top: 86.6px;
+        left: 125px;
+        animation-delay: 2s;
+    }
+
+    .t6 {
+        top: 86.6px;
+        left: 175px;
+        animation-delay: 2.5s;
+    }
+
+    .t7 {
+        top: 129.9px;
+        left: 125px;
+        animation-delay: 3s;
+    }
+
+    .fractal-explanation {
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: scale(0) rotate(180deg);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+    }
+</style>

@@ -1,0 +1,328 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CatParadox from '../components/CatParadox.astro';
+---
+
+<Layout title="Schrödinger's Cat - Philosophy & Physics">
+	<main>
+		<h1>Schrödinger's <span class="text-gradient">Cat</span></h1>
+		
+		<div class="intro-text">
+			<p>
+				One of the most famous thought experiments in quantum mechanics, Schrödinger's Cat 
+				illustrates the apparent paradox of quantum superposition and the role of observation 
+				in quantum mechanics.
+			</p>
+		</div>
+
+		<div class="quote-section">
+			<blockquote>
+				"One can even set up quite ridiculous cases. A cat is penned up in a steel chamber..." 
+				- Erwin Schrödinger, 1935
+			</blockquote>
+		</div>
+
+		<section class="content-section">
+			<h2>The Quantum States</h2>
+			<div class="quantum-states">
+				<div class="state-container">
+					<div class="atom-animation">
+						<div class="electron-orbit">
+							<div class="electron"></div>
+						</div>
+						<div class="nucleus"></div>
+					</div>
+					<p>Ground State</p>
+				</div>
+				<div class="state-container">
+					<div class="atom-animation excited">
+						<div class="electron-orbit">
+							<div class="electron"></div>
+						</div>
+						<div class="nucleus"></div>
+					</div>
+					<p>Excited State</p>
+				</div>
+			</div>
+
+			<div class="formula-section">
+				<h3>The Mathematics of Superposition</h3>
+				<div class="formula">
+					|Ψ⟩ = α|alive⟩ + β|dead⟩
+					<p class="formula-explanation">
+						Where |α|² + |β|² = 1, representing the probability amplitudes of finding
+						the cat in either state upon measurement.
+					</p>
+				</div>
+			</div>
+
+			<div class="cat-animation">
+				<div class="box">
+					<div class="cat-states">
+						<div class="cat alive"></div>
+						<div class="cat dead"></div>
+					</div>
+				</div>
+				<p class="animation-caption">Quantum Superposition Visualization</p>
+			</div>
+
+			<h2>The Thought Experiment</h2>
+			<div class="experiment-details">
+				<div class="setup">
+					<h3>Experimental Setup</h3>
+					<ul>
+						<li>Sealed steel chamber</li>
+						<li>Radioactive atom</li>
+						<li>Geiger counter</li>
+						<li>Hammer mechanism</li>
+						<li>Poison flask</li>
+						<li>The cat</li>
+					</ul>
+				</div>
+				<div class="probability">
+					<h3>Decay Probability</h3>
+					<div class="formula">
+						P(t) = 1 - e<sup>-λt</sup>
+						<p class="formula-explanation">
+							λ represents the decay constant, t is time elapsed
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<h2>Philosophical Implications</h2>
+			<div class="grid-container">
+				<div class="topic">
+					<h3>Reality & Observation</h3>
+					<p>
+						The experiment raises fundamental questions about the nature of reality and 
+						whether consciousness plays a role in collapsing quantum states into definite outcomes.
+					</p>
+				</div>
+				<div class="topic">
+					<h3>Quantum Superposition</h3>
+					<p>
+						Challenges our classical understanding of reality, suggesting that objects can 
+						exist in multiple states simultaneously until observed.
+					</p>
+				</div>
+			</div>
+
+			<CatParadox />
+		</section>
+
+		<div class="navigation">
+			<a href="/" class="back-button">← Back to Main Page</a>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		text-align: center;
+		margin: 1em 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.intro-text {
+		margin: 2rem 0;
+		font-size: 1.2rem;
+		text-align: center;
+		max-width: 600px;
+		margin-inline: auto;
+	}
+	.quote-section {
+		margin: 3rem 0;
+		padding: 2rem;
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 25%);
+	}
+	blockquote {
+		font-style: italic;
+		text-align: center;
+		color: rgb(var(--accent-light));
+		margin: 0;
+	}
+	.quantum-states {
+		display: flex;
+		justify-content: space-around;
+		margin: 2rem 0;
+	}
+	.state-container {
+		text-align: center;
+	}
+	.atom-animation {
+		width: 150px;
+		height: 150px;
+		position: relative;
+		margin: 0 auto;
+	}
+	.electron-orbit {
+		width: 100%;
+		height: 100%;
+		border: 2px solid rgba(var(--accent-light), 0.3);
+		border-radius: 50%;
+		position: absolute;
+		animation: orbit 3s linear infinite;
+	}
+	.electron {
+		width: 10px;
+		height: 10px;
+		background: rgb(var(--accent-light));
+		border-radius: 50%;
+		position: absolute;
+		top: -5px;
+		left: calc(50% - 5px);
+	}
+	.nucleus {
+		width: 20px;
+		height: 20px;
+		background: rgb(var(--accent));
+		border-radius: 50%;
+		position: absolute;
+		top: calc(50% - 10px);
+		left: calc(50% - 10px);
+	}
+	.excited .electron-orbit {
+		width: 120%;
+		height: 120%;
+		top: -10%;
+		left: -10%;
+	}
+	@keyframes orbit {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
+	}
+	.formula-section {
+		text-align: center;
+		margin: 3rem 0;
+	}
+	.formula {
+		display: inline-block;
+		padding: 1.5rem;
+		background: rgba(var(--accent-dark), 0.3);
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 20%);
+		font-family: 'Times New Roman', serif;
+		font-size: 1.5rem;
+	}
+	.formula-explanation {
+		font-size: 0.9rem;
+		margin-top: 1rem;
+		font-family: system-ui, sans-serif;
+	}
+	.cat-animation {
+		margin: 3rem 0;
+		text-align: center;
+	}
+	.box {
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		border: 2px solid rgba(var(--accent-light), 0.3);
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+	}
+	.cat-states {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		animation: superposition 4s ease-in-out infinite;
+	}
+	.cat {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: 0.7;
+	}
+	.cat.alive {
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='40' fill='%238B5CF6'/%3E%3C/svg%3E");
+	}
+	.cat.dead {
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10' y='10' width='80' height='80' fill='%23EF4444'/%3E%3C/svg%3E");
+	}
+	@keyframes superposition {
+		0%, 100% { transform: rotateY(0deg); }
+		50% { transform: rotateY(180deg); }
+	}
+	.experiment-details {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+	.setup ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	.setup li {
+		margin: 0.5rem 0;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+	.setup li::before {
+		content: "•";
+		color: rgb(var(--accent-light));
+		position: absolute;
+		left: 0;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	.topic {
+		padding: 1.5rem;
+		background: rgba(var(--accent-dark), 0.2);
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 15%);
+	}
+	.topic h3 {
+		color: rgb(var(--accent-light));
+		margin-top: 0;
+	}
+	h2 {
+		text-align: center;
+		color: rgb(var(--accent-light));
+		margin-top: 3rem;
+	}
+	.navigation {
+		text-align: center;
+		margin-top: 4rem;
+	}
+	.back-button {
+		display: inline-block;
+		padding: 0.8rem 1.5rem;
+		background: rgba(var(--accent-dark), 0.5);
+		color: rgb(var(--accent-light));
+		text-decoration: none;
+		border-radius: 4px;
+		transition: background-color 0.3s ease;
+	}
+	.back-button:hover {
+		background: rgba(var(--accent-dark), 0.8);
+	}
+</style>

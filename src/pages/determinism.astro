@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DeterminismPhysics from '../components/DeterminismPhysics.astro';
+import ExistentialismSection from '../components/ExistentialismSection.astro';
+---
+
+<Layout title="Determinism & Existentialism - Philosophy & Physics">
+	<main>
+		<h1>Determinism & <span class="text-gradient">Existentialism</span></h1>
+		
+		<div class="intro-text">
+			<p>
+				The eternal debate between determinism and free will takes on new dimensions 
+				when viewed through the lens of physics and existentialist philosophy.
+			</p>
+		</div>
+
+		<div class="quote-section">
+			<blockquote>
+				"Man is condemned to be free; because once thrown into the world, he is responsible for everything he does."
+				<cite>- Jean-Paul Sartre</cite>
+			</blockquote>
+		</div>
+
+		<div class="content-grid">
+			<section class="determinism-section">
+				<h2>Physical Determinism</h2>
+				<DeterminismPhysics />
+			</section>
+
+			<section class="existentialism-section">
+				<h2>Existential Freedom</h2>
+				<ExistentialismSection />
+			</section>
+		</div>
+
+		<div class="navigation">
+			<a href="/" class="back-button">← Back to Main Page</a>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		text-align: center;
+		margin: 1em 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.intro-text {
+		margin: 2rem 0;
+		font-size: 1.2rem;
+		text-align: center;
+		max-width: 600px;
+		margin-inline: auto;
+	}
+	.quote-section {
+		margin: 3rem 0;
+		padding: 2rem;
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 25%);
+	}
+	blockquote {
+		font-style: italic;
+		text-align: center;
+		color: rgb(var(--accent-light));
+		margin: 0;
+	}
+	cite {
+		display: block;
+		margin-top: 1rem;
+		font-size: 0.9em;
+	}
+	.content-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		margin: 4rem 0;
+	}
+	h2 {
+		text-align: center;
+		color: rgb(var(--accent-light));
+		margin-bottom: 2rem;
+	}
+	.navigation {
+		text-align: center;
+		margin-top: 4rem;
+	}
+	.back-button {
+		display: inline-block;
+		padding: 0.8rem 1.5rem;
+		background: rgba(var(--accent-dark), 0.5);
+		color: rgb(var(--accent-light));
+		text-decoration: none;
+		border-radius: 4px;
+		transition: background-color 0.3s ease;
+	}
+	.back-button:hover {
+		background: rgba(var(--accent-dark), 0.8);
+	}
+</style>

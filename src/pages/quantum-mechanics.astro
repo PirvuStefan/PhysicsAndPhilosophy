@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import QuantumStates from '../components/QuantumStates.astro';
+import DescartesSection from '../components/DescartesSection.astro';
+---
+
+<Layout title="Quantum Mechanics & Consciousness - Philosophy & Physics">
+	<main>
+		<h1>Quantum Mechanics & <span class="text-gradient">Consciousness</span></h1>
+		
+		<div class="intro-text">
+			<p>
+				The intersection of quantum mechanics and consciousness presents one of the most 
+				fascinating convergences of physics and philosophy, echoing Descartes' fundamental 
+				question about the nature of existence and awareness.
+			</p>
+		</div>
+
+		<div class="quote-section">
+			<blockquote>
+				"Cogito, ergo sum" (I think, therefore I am)
+				<cite>- René Descartes</cite>
+			</blockquote>
+		</div>
+
+		<section class="content-section">
+			<h2>Quantum States Visualization</h2>
+			<QuantumStates />
+
+			<h2>The Wave Function</h2>
+			<div class="formula-container">
+				<div class="formula">
+					<p>Schrödinger's Wave Equation:</p>
+					<div class="equation">
+						iℏ ∂Ψ/∂t = ĤΨ
+					</div>
+					<p class="formula-explanation">
+						This fundamental equation describes how quantum states evolve over time, 
+						perhaps analogous to how consciousness flows through our experience of reality.
+					</p>
+				</div>
+			</div>
+
+			<div class="wave-animation">
+				<div class="wave"></div>
+				<p class="animation-caption">
+					Wave function collapse: The moment of observation, like Descartes' moment of self-awareness
+				</p>
+			</div>
+
+			<h2>Cartesian Dualism & Quantum Measurement</h2>
+			<div class="grid-container">
+				<div class="topic">
+					<h3>The Observer Effect</h3>
+					<p>
+						Just as Descartes separated mind from matter, quantum mechanics reveals 
+						the inseparable role of the observer in determining reality. The act of 
+						measurement fundamentally affects the quantum system being observed.
+					</p>
+				</div>
+				<div class="topic">
+					<h3>Consciousness & Collapse</h3>
+					<p>
+						The quantum measurement problem raises questions similar to Cartesian 
+						skepticism: Does consciousness play a special role in collapsing the 
+						wave function? Is awareness fundamental to reality itself?
+					</p>
+				</div>
+			</div>
+
+			<h2>Modern Perspectives</h2>
+			<div class="topic">
+				<h3>The Copenhagen Interpretation</h3>
+				<div class="formula">
+					|Ψ⟩ = Σ cᵢ|ψᵢ⟩
+				</div>
+				<p>
+					The superposition of states before measurement mirrors Descartes' methodological 
+					doubt - all possibilities exist until consciousness intervenes through observation.
+				</p>
+			</div>
+
+			<div class="topic">
+				<h3>Quantum Cognition</h3>
+				<p>
+					Recent theories propose that quantum processes in microtubules within brain 
+					neurons might play a role in consciousness, potentially bridging the gap 
+					between physical and mental realms that Descartes identified.
+				</p>
+				<DescartesSection />
+			</div>
+		</section>
+
+		<div class="navigation">
+			<a href="/" class="back-button">← Back to Main Page</a>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		text-align: center;
+		margin: 1em 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.intro-text {
+		margin: 2rem 0;
+		font-size: 1.2rem;
+		text-align: center;
+		max-width: 600px;
+		margin-inline: auto;
+	}
+	.quote-section {
+		margin: 3rem 0;
+		padding: 2rem;
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 25%);
+	}
+	blockquote {
+		font-style: italic;
+		text-align: center;
+		color: rgb(var(--accent-light));
+		margin: 0;
+	}
+	cite {
+		display: block;
+		margin-top: 1rem;
+		font-size: 0.9em;
+	}
+	.content-section {
+		margin: 4rem 0;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	.topic {
+		padding: 1.5rem;
+		background: rgba(var(--accent-dark), 0.2);
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 15%);
+		margin-bottom: 2rem;
+	}
+	.topic h3 {
+		color: rgb(var(--accent-light));
+		margin-top: 0;
+	}
+	h2 {
+		text-align: center;
+		color: rgb(var(--accent-light));
+		margin-top: 3rem;
+	}
+	.formula-container {
+		margin: 2rem 0;
+		text-align: center;
+	}
+	.formula {
+		display: inline-block;
+		padding: 1.5rem;
+		background: rgba(var(--accent-dark), 0.3);
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 20%);
+	}
+	.equation {
+		font-size: 1.5rem;
+		margin: 1rem 0;
+		font-family: 'Times New Roman', serif;
+	}
+	.formula-explanation {
+		font-size: 0.9rem;
+		margin-top: 1rem;
+		color: rgba(255, 255, 255, 0.8);
+	}
+	.wave-animation {
+		position: relative;
+		height: 100px;
+		margin: 3rem 0;
+		overflow: hidden;
+		background: rgba(var(--accent-dark), 0.2);
+		border-radius: 8px;
+	}
+	.wave {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(var(--accent-light), 0.2), transparent);
+		animation: wave 3s infinite linear;
+	}
+	@keyframes wave {
+		0% {
+			transform: translateX(-100%) scaleY(0.5);
+		}
+		50% {
+			transform: translateX(0%) scaleY(1);
+		}
+		100% {
+			transform: translateX(100%) scaleY(0.5);
+		}
+	}
+	.animation-caption {
+		text-align: center;
+		font-size: 0.9rem;
+		margin-top: 1rem;
+		color: rgba(255, 255, 255, 0.8);
+	}
+	.navigation {
+		text-align: center;
+		margin-top: 4rem;
+	}
+	.back-button {
+		display: inline-block;
+		padding: 0.8rem 1.5rem;
+		background: rgba(var(--accent-dark), 0.5);
+		color: rgb(var(--accent-light));
+		text-decoration: none;
+		border-radius: 4px;
+		transition: background-color 0.3s ease;
+	}
+	.back-button:hover {
+		background: rgba(var(--accent-dark), 0.8);
+	}
+</style>

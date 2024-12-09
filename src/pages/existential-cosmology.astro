@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuantumVacuum from '../components/QuantumVacuum.astro';
+import PhilosophicalImplications from '../components/PhilosophicalImplications.astro';
+---
+
+<Layout title="Existential Cosmology - Philosophy & Physics">
+	<main>
+		<h1>Existential <span class="text-gradient">Cosmology</span></h1>
+		
+		<div class="intro-text">
+			<p>
+				At the intersection of quantum physics and existential philosophy lies a profound 
+				question: How does the fundamental nature of reality shape our understanding of 
+				existence and meaning?
+			</p>
+		</div>
+
+		<div class="quote-section">
+			<blockquote>
+				"Out of nothing I have created a strange new universe."
+				<cite>- János Bolyai</cite>
+			</blockquote>
+		</div>
+
+		<QuantumVacuum />
+		<PhilosophicalImplications />
+
+		<div class="navigation">
+			<a href="/" class="back-button">← Back to Main Page</a>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		text-align: center;
+		margin: 1em 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.intro-text {
+		margin: 2rem 0;
+		font-size: 1.2rem;
+		text-align: center;
+		max-width: 600px;
+		margin-inline: auto;
+	}
+	.quote-section {
+		margin: 3rem 0;
+		padding: 2rem;
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 25%);
+	}
+	blockquote {
+		font-style: italic;
+		text-align: center;
+		color: rgb(var(--accent-light));
+		margin: 0;
+	}
+	cite {
+		display: block;
+		margin-top: 1rem;
+		font-size: 0.9em;
+	}
+	.navigation {
+		text-align: center;
+		margin-top: 4rem;
+	}
+	.back-button {
+		display: inline-block;
+		padding: 0.8rem 1.5rem;
+		background: rgba(var(--accent-dark), 0.5);
+		color: rgb(var(--accent-light));
+		text-decoration: none;
+		border-radius: 4px;
+		transition: background-color 0.3s ease;
+	}
+	.back-button:hover {
+		background: rgba(var(--accent-dark), 0.8);
+	}
+</style>

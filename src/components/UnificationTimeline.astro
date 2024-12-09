@@ -1,0 +1,268 @@
+---
+---
+
+<section class="unification-timeline">
+    <h2>Historical Steps Toward Unity</h2>
+    
+    <div class="spinoza-section">
+        <h3>Spinoza's Monism</h3>
+        <div class="portrait-container">
+            <img 
+                src="https://oclesis.com.mx/wp-content/uploads/2022/05/spinoza-e1516702848503.jpg"
+                alt="Baruch Spinoza portrait"
+                class="spinoza-portrait"
+            />
+        </div>
+        <div class="concept-animation">
+            <div class="unity-symbol"></div>
+            <div class="manifestations"></div>
+        </div>
+        <p>
+            Baruch Spinoza argued that all of existence is one substance (God or Nature), 
+            and everything we perceive as distinct is simply an expression of this singular entity.
+        </p>
+    </div>
+
+    <div class="timeline-grid">
+        <div class="timeline-card newton">
+            <h3>Newton's Universal Laws</h3>
+            <div class="formula">F = G(m₁m₂)/r²</div>
+            <div class="animation-container">
+                <div class="celestial-body planet"></div>
+                <div class="orbit-path"></div>
+                <div class="celestial-body sun"></div>
+            </div>
+            <p>
+                Newton unified terrestrial and celestial mechanics, showing that the same 
+                laws govern falling apples and orbiting planets.
+            </p>
+        </div>
+
+        <div class="timeline-card maxwell">
+            <h3>Maxwell's Electromagnetism</h3>
+            <div class="formula">∇ × E = -∂B/∂t</div>
+            <div class="animation-container">
+                <div class="em-field">
+                    <div class="electric-field"></div>
+                    <div class="magnetic-field"></div>
+                </div>
+            </div>
+            <p>
+                James Clerk Maxwell unified electricity and magnetism, revealing them as 
+                aspects of a single electromagnetic force.
+            </p>
+        </div>
+
+        <div class="timeline-card einstein">
+            <h3>Einstein's Relativity</h3>
+            <div class="formula">E = mc²</div>
+            <div class="animation-container">
+                <div class="spacetime-grid"></div>
+                <div class="mass-object"></div>
+            </div>
+            <p>
+                Einstein unified space and time into spacetime, and showed that mass and 
+                energy are interchangeable aspects of a single entity.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .unification-timeline {
+        margin: 4rem 0;
+        padding: 2rem;
+        background: rgba(var(--accent-dark), 0.2);
+        border-radius: 12px;
+    }
+
+    h2, h3 {
+        text-align: center;
+        color: rgb(var(--accent-light));
+        margin-bottom: 2rem;
+    }
+
+    .spinoza-section {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .portrait-container {
+        display: inline-block;
+        padding: 10px;
+        background: linear-gradient(45deg, rgba(var(--accent), 0.3), rgba(var(--accent-light), 0.3));
+        border-radius: 50%;
+        margin: 2rem 0;
+        transition: transform 0.3s ease;
+    }
+
+    .portrait-container:hover {
+        transform: scale(1.05);
+    }
+
+    .spinoza-portrait {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid rgba(var(--accent-light), 0.3);
+    }
+
+    .timeline-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-card {
+        padding: 1.5rem;
+        background: rgba(var(--accent-dark), 0.3);
+        border-radius: 8px;
+        border: 1px solid rgba(var(--accent-light), 0.2);
+    }
+
+    .formula {
+        text-align: center;
+        font-family: 'Times New Roman', serif;
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        color: rgb(var(--accent-light));
+    }
+
+    .animation-container {
+        height: 150px;
+        margin: 1rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .celestial-body {
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .sun {
+        width: 40px;
+        height: 40px;
+        background: rgb(var(--accent));
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .planet {
+        width: 20px;
+        height: 20px;
+        background: rgb(var(--accent-light));
+        animation: orbit 4s infinite linear;
+    }
+
+    .orbit-path {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid rgba(var(--accent-light), 0.3);
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .em-field {
+        position: relative;
+        height: 100%;
+    }
+
+    .electric-field, .magnetic-field {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: rgb(var(--accent-light));
+        top: 50%;
+        transform-origin: center;
+        animation: wavePropagate 3s infinite;
+    }
+
+    .magnetic-field {
+        transform: rotate(90deg);
+        background: rgb(var(--accent));
+        animation-delay: 0.75s;
+    }
+
+    .spacetime-grid {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(var(--accent-light), 0.2) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(var(--accent-light), 0.2) 1px, transparent 1px);
+        background-size: 20px 20px;
+        animation: gridDistort 4s infinite;
+    }
+
+    .mass-object {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: rgb(var(--accent));
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .concept-animation {
+        height: 200px;
+        position: relative;
+        margin: 2rem 0;
+    }
+
+    .unity-symbol {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: rgb(var(--accent-light));
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: pulsate 4s infinite;
+    }
+
+    .manifestations {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at center,
+            rgba(var(--accent-light), 0.2) 0%,
+            transparent 70%
+        );
+        animation: expand 6s infinite;
+    }
+
+    @keyframes orbit {
+        from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+    }
+
+    @keyframes wavePropagate {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+
+    @keyframes gridDistort {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(0.8) rotate(5deg); }
+    }
+
+    @keyframes pulsate {
+        0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+        50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.4; }
+    }
+
+    @keyframes expand {
+        0%, 100% { transform: scale(1); opacity: 0.2; }
+        50% { transform: scale(1.5); opacity: 0.4; }
+    }
+</style>

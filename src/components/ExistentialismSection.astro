@@ -1,0 +1,382 @@
+---
+---
+
+<div class="existentialism-container">
+    <div class="sartre-section">
+        <div class="portraits">
+            <div class="portrait-container">
+                <img 
+                    src="https://cdn.britannica.com/76/9476-050-6661C2E1/photograph-Jean-Paul-Sartre-Gisele-Freund-1968.jpg"
+                    alt="Jean-Paul Sartre portrait"
+                    class="sartre-portrait"
+                />
+            </div>
+        </div>
+        
+        <!-- Rest of the component remains unchanged -->
+        <div class="key-concepts">
+            <div class="concept">
+                <h3>Existence Precedes Essence</h3>
+                <div class="animation-container">
+                    <div class="existence-animation">
+                        <div class="being"></div>
+                        <div class="essence"></div>
+                    </div>
+                </div>
+                <p>
+                    Humans first exist, then through their actions and choices, create their essence. 
+                    We are not born with a predetermined nature but must create ourselves through 
+                    our choices.
+                </p>
+            </div>
+
+            <div class="concept">
+                <h3>Radical Freedom</h3>
+                <div class="animation-container">
+                    <div class="freedom-animation">
+                        <div class="paths">
+                            <div class="path"></div>
+                            <div class="path"></div>
+                            <div class="path"></div>
+                        </div>
+                        <div class="choice-point"></div>
+                    </div>
+                </div>
+                <p>
+                    We are "condemned to be free" - forced to make choices in every moment, 
+                    with no external forces determining our decisions. This freedom brings 
+                    both possibility and responsibility.
+                </p>
+            </div>
+
+            <div class="concept">
+                <h3>Authenticity</h3>
+                <div class="animation-container">
+                    <div class="authenticity-animation">
+                        <div class="mask"></div>
+                        <div class="true-self"></div>
+                    </div>
+                </div>
+                <p>
+                    Living authentically means embracing our freedom and responsibility, 
+                    facing the anxiety of choice rather than falling into bad faith or 
+                    self-deception.
+                </p>
+            </div>
+
+            <div class="concept">
+                <h3>Morality & Freedom</h3>
+                <div class="animation-container">
+                    <div class="morality-animation">
+                        <div class="scales">
+                            <div class="scale left"></div>
+                            <div class="scale right"></div>
+                            <div class="balance-point"></div>
+                        </div>
+                        <div class="choice-ripples"></div>
+                    </div>
+                </div>
+                <p>
+                    In a world without predetermined moral values, each individual must 
+                    create and uphold their own ethical framework through conscious choices 
+                    and actions.
+                </p>
+            </div>
+        </div>
+
+        <div class="implications">
+            <h3>Existential Implications</h3>
+            <div class="implication-grid">
+                <div class="implication">
+                    <h4>Moral Responsibility</h4>
+                    <p>
+                        In a world without predetermined essence, we bear complete 
+                        responsibility for our actions and their consequences.
+                    </p>
+                </div>
+                <div class="implication">
+                    <h4>Meaning Creation</h4>
+                    <p>
+                        We must create our own meaning in an inherently meaningless 
+                        universe, through our choices and commitments.
+                    </p>
+                </div>
+                <div class="implication">
+                    <h4>Existential Anxiety</h4>
+                    <p>
+                        The weight of absolute freedom and responsibility creates 
+                        anxiety, which we must confront rather than flee from.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .existentialism-container {
+        padding: 2rem;
+        background: rgba(var(--accent-dark), 0.2);
+        border-radius: 12px;
+    }
+
+    .sartre-section {
+        text-align: center;
+    }
+
+    .portraits {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .portrait-container {
+        display: inline-block;
+        padding: 10px;
+        background: linear-gradient(45deg, rgba(var(--accent), 0.3), rgba(var(--accent-light), 0.3));
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    .portrait-container:hover {
+        transform: scale(1.05);
+    }
+
+    .sartre-portrait {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid rgba(var(--accent-light), 0.3);
+    }
+
+    .key-concepts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+
+    .concept {
+        padding: 1.5rem;
+        background: rgba(var(--accent-dark), 0.3);
+        border-radius: 8px;
+        border: 1px solid rgba(var(--accent-light), 0.2);
+    }
+
+    .concept h3 {
+        color: rgb(var(--accent-light));
+        margin-bottom: 1rem;
+    }
+
+    .animation-container {
+        height: 150px;
+        margin: 1rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .existence-animation {
+        position: relative;
+        height: 100%;
+    }
+
+    .being {
+        width: 30px;
+        height: 30px;
+        background: rgb(var(--accent-light));
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: emerge 4s infinite;
+    }
+
+    .essence {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at center,
+            rgba(var(--accent-light), 0.2) 0%,
+            transparent 70%
+        );
+        animation: expand 4s infinite;
+    }
+
+    .freedom-animation {
+        position: relative;
+        height: 100%;
+    }
+
+    .paths {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .path {
+        width: 2px;
+        height: 0%;
+        background: rgba(var(--accent-light), 0.5);
+        animation: grow 3s infinite;
+    }
+
+    .choice-point {
+        width: 20px;
+        height: 20px;
+        background: rgb(var(--accent-light));
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        bottom: 20%;
+        transform: translateX(-50%);
+        animation: pulse 2s infinite;
+    }
+
+    .authenticity-animation {
+        position: relative;
+        height: 100%;
+    }
+
+    .mask {
+        width: 40px;
+        height: 40px;
+        background: rgba(var(--accent-dark), 0.8);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: fade 4s infinite;
+    }
+
+    .true-self {
+        width: 30px;
+        height: 30px;
+        background: rgb(var(--accent-light));
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .morality-animation {
+        position: relative;
+        height: 100%;
+    }
+
+    .scales {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .scale {
+        width: 60px;
+        height: 4px;
+        background: rgb(var(--accent-light));
+        position: absolute;
+        transform-origin: center;
+    }
+
+    .scale.left {
+        transform: rotate(-20deg);
+        animation: balanceLeft 4s infinite;
+    }
+
+    .scale.right {
+        transform: rotate(20deg);
+        animation: balanceRight 4s infinite;
+    }
+
+    .balance-point {
+        width: 10px;
+        height: 10px;
+        background: rgb(var(--accent));
+        border-radius: 50%;
+    }
+
+    .choice-ripples {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at center,
+            rgba(var(--accent-light), 0.2) 0%,
+            transparent 70%
+        );
+        animation: ripple 3s infinite;
+    }
+
+    .implications {
+        margin-top: 3rem;
+    }
+
+    .implication-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .implication {
+        padding: 1.5rem;
+        background: rgba(var(--accent-dark), 0.3);
+        border-radius: 8px;
+        text-align: left;
+    }
+
+    .implication h4 {
+        color: rgb(var(--accent-light));
+        margin-bottom: 1rem;
+    }
+
+    @keyframes emerge {
+        0%, 100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+        50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    }
+
+    @keyframes expand {
+        0%, 100% { transform: scale(1); opacity: 0.2; }
+        50% { transform: scale(1.5); opacity: 0.4; }
+    }
+
+    @keyframes grow {
+        0% { height: 0%; }
+        100% { height: 100%; }
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: translateX(-50%) scale(1); }
+        50% { transform: translateX(-50%) scale(1.2); }
+    }
+
+    @keyframes fade {
+        0%, 100% { opacity: 0.8; transform: translate(-50%, -50%) rotate(0deg); }
+        50% { opacity: 0.2; transform: translate(-50%, -50%) rotate(180deg); }
+    }
+
+    @keyframes balanceLeft {
+        0%, 100% { transform: rotate(-20deg); }
+        50% { transform: rotate(20deg); }
+    }
+
+    @keyframes balanceRight {
+        0%, 100% { transform: rotate(20deg); }
+        50% { transform: rotate(-20deg); }
+    }
+
+    @keyframes ripple {
+        0% { transform: scale(0.8); opacity: 0.8; }
+        100% { transform: scale(1.5); opacity: 0; }
+    }
+</style>

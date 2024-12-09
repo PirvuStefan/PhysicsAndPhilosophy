@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Philosophy & Physics - The Grand Unity">
+	<main>
+		<h1>The Unity of <span class="text-gradient">Philosophy & Physics</span></h1>
+		
+		<div class="intro-text">
+			<p>
+				At the intersection of human thought and natural law lies a profound connection 
+				between philosophy and physics. Both seek to understand the fundamental nature 
+				of reality, consciousness, and our place in the cosmos.
+			</p>
+		</div>
+
+		<div class="quote-section">
+			<blockquote>
+				"The more precisely the position is determined, the less precisely the momentum 
+				is known in this instant, and vice versa." - Werner Heisenberg
+			</blockquote>
+		</div>
+
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/quantum-mechanics"
+				title="Quantum Mechanics & Consciousness"
+				body="Exploring the mysterious relationship between quantum physics and the nature of consciousness."
+			/>
+			<Card
+				href="/determinism"
+				title="Causality & Free Will"
+				body="How physics' deterministic laws challenge and shape our understanding of free will."
+			/>
+			<Card
+				href="/existential-cosmology"
+				title="Existential Cosmology"
+				body="From the Big Bang to entropy: philosophical implications of modern cosmology."
+			/>
+			<Card
+				href="/unified-theory"
+				title="The Search for Unity"
+				body="How the quest for a Theory of Everything parallels philosophical monism."
+			/>
+			<Card
+				href="/schrodinger-cat"
+				title="Schrödinger's Cat"
+				body="The famous thought experiment exploring quantum superposition and the role of observation in reality."
+			/>
+			<Card
+				href="/ship-of-theseus"
+				title="Ship of Theseus"
+				body="Ancient paradox of identity and change, paralleling quantum particles and wave-particle duality."
+			/>
+		</ul>
+
+		<section class="content-section">
+			<h2>Key Intersections</h2>
+			<div class="grid-container">
+				<div class="topic">
+					<h3>Reality & Perception</h3>
+					<p>
+						Quantum mechanics reveals that observation affects reality, echoing ancient 
+						philosophical questions about the nature of perception and reality itself.
+					</p>
+				</div>
+				<div class="topic">
+					<h3>Time & Existence</h3>
+					<p>
+						Einstein's relativity transformed our understanding of time, supporting 
+						philosophical theories about the subjective nature of temporal experience.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		text-align: center;
+		margin: 1em 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.intro-text {
+		margin: 2rem 0;
+		font-size: 1.2rem;
+		text-align: center;
+		max-width: 600px;
+		margin-inline: auto;
+	}
+	.quote-section {
+		margin: 3rem 0;
+		padding: 2rem;
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 25%);
+	}
+	blockquote {
+		font-style: italic;
+		text-align: center;
+		color: rgb(var(--accent-light));
+		margin: 0;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		margin: 2rem 0;
+	}
+	.content-section {
+		margin: 4rem 0;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	.topic {
+		padding: 1.5rem;
+		background: rgba(var(--accent-dark), 0.2);
+		border-radius: 8px;
+		border: 1px solid rgba(var(--accent-light), 15%);
+	}
+	.topic h3 {
+		color: rgb(var(--accent-light));
+		margin-top: 0;
+	}
+	h2 {
+		text-align: center;
+		color: rgb(var(--accent-light));
+	}
+</style>

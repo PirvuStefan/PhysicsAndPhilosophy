@@ -1,0 +1,250 @@
+---
+---
+
+<div class="cat-paradox">
+    <div class="box-container">
+        <div class="quantum-box">
+            <div class="cat">
+                <div class="cat-face">
+                    <div class="eyes confused">
+                        <div class="eye left">?</div>
+                        <div class="eye right">?</div>
+                    </div>
+                    <div class="nose"></div>
+                    <div class="whiskers"></div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="cat-body">
+                    <div class="tail"></div>
+                </div>
+            </div>
+            <div class="question-marks">
+                <span>?</span>
+                <span>?</span>
+                <span>?</span>
+            </div>
+            <div class="probability-wave"></div>
+        </div>
+    </div>
+    
+    <div class="explanation">
+        <h3>The Quantum Superposition Paradox</h3>
+        <div class="explanation-text">
+            <p>
+                In this thought experiment, a cat is placed in a sealed box with a device that may or 
+                may not kill it based on a quantum event. According to quantum mechanics, until the 
+                box is opened, the cat exists in a superposition of states - simultaneously alive and dead.
+            </p>
+            <p>
+                This paradox illustrates the bizarre nature of quantum superposition when applied to 
+                macroscopic objects, challenging our classical understanding of reality.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .cat-paradox {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: rgba(var(--accent-dark), 0.2);
+        border-radius: 12px;
+    }
+
+    .box-container {
+        position: relative;
+        height: 300px;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quantum-box {
+        width: 200px;
+        height: 200px;
+        border: 3px solid rgba(var(--accent-light), 0.5);
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(var(--accent-dark), 0.3);
+    }
+
+    .cat {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .cat-face {
+        width: 70px;
+        height: 70px;
+        background: rgba(var(--accent-light), 0.8);
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .eyes {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .eye {
+        font-size: 16px;
+        color: rgba(var(--accent-dark), 0.9);
+        font-weight: bold;
+        animation: blink 4s infinite;
+    }
+
+    .nose {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background: rgba(var(--accent-dark), 0.9);
+        border-radius: 50%;
+    }
+
+    .mouth {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 10px;
+        border-bottom: 2px solid rgba(var(--accent-dark), 0.6);
+        border-radius: 50%;
+    }
+
+    .whiskers {
+        position: absolute;
+        width: 100%;
+        bottom: 25px;
+    }
+
+    .whiskers::before, .whiskers::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 1px;
+        background: rgba(var(--accent-dark), 0.6);
+    }
+
+    .whiskers::before {
+        transform: rotate(30deg);
+        left: 5px;
+    }
+
+    .whiskers::after {
+        transform: rotate(-30deg);
+        right: 5px;
+    }
+
+    .cat-body {
+        width: 90px;
+        height: 50px;
+        background: rgba(var(--accent-light), 0.8);
+        border-radius: 25px;
+        margin-top: 5px;
+        position: relative;
+    }
+
+    .tail {
+        position: absolute;
+        bottom: 20px;
+        right: -20px;
+        width: 30px;
+        height: 20px;
+        border-right: 3px solid rgba(var(--accent-light), 0.8);
+        border-radius: 0 50% 50% 0;
+        animation: tailWag 2s infinite;
+    }
+
+    .question-marks {
+        position: absolute;
+        width: 100%;
+        top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .question-marks span {
+        color: rgba(var(--accent-light), 0.6);
+        font-size: 24px;
+        font-weight: bold;
+        animation: float 2s infinite;
+    }
+
+    .question-marks span:nth-child(2) {
+        animation-delay: 0.6s;
+    }
+
+    .question-marks span:nth-child(3) {
+        animation-delay: 1.2s;
+    }
+
+    .probability-wave {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(90deg,
+            transparent,
+            rgba(var(--accent-light), 0.2),
+            transparent
+        );
+        animation: wave 2s infinite linear;
+    }
+
+    .explanation {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .explanation h3 {
+        color: rgb(var(--accent-light));
+        margin-bottom: 1rem;
+    }
+
+    .explanation-text {
+        text-align: left;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .explanation-text p {
+        margin: 1rem 0;
+        line-height: 1.6;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+
+    @keyframes blink {
+        0%, 45%, 55%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    @keyframes tailWag {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(20deg); }
+    }
+
+    @keyframes wave {
+        0% { transform: translateX(-100%) scaleY(0.5); }
+        50% { transform: translateX(0%) scaleY(1); }
+        100% { transform: translateX(100%) scaleY(0.5); }
+    }
+</style>
