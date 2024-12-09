@@ -55,4 +55,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check the Astro documentation that they provide: [our documentation](https://docs.astro.build) 
+Feel free to check the Astro documentation that they provide: [documentation](https://docs.astro.build) 
