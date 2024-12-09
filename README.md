@@ -35,8 +35,8 @@ There's nothing special about `src/components/`, but that's where we like to put
 Any static assets, like images, can be placed in the `public/` directory.
 ## 🌎 View the website live : https://peaceful-sfogliatella-56991f.netlify.app/
 
-# The physics of the project may not be entirely accurate due to certain approximations, simplifications, practical limitations inherent in its design or due to my lack of understanding of the subject.
-# However, the philosophy driving the project is unwaveringly accurate and deeply rooted in its purpose.
+ The physics of the project may not be entirely accurate due to certain approximations, simplifications, practical limitations inherent in its design or due to my lack of understanding of the subject.
+ However, the philosophy driving the project is unwaveringly accurate and deeply rooted in its purpose.
 
 
 
